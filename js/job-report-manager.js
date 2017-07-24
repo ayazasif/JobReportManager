@@ -46,7 +46,7 @@ JobReportManager.prototype.GetReports = function(TreeType, TreeGuid, TreeDescent
 	this.RqlConnectorObj.SendRql(RqlXml, false, function(data){
 		var regHeadlinePageIDPattern = '(.+?)\\(PageID:.([0-9]+?)\\)';
 		var regHeadlinePageID = new RegExp(regHeadlinePageIDPattern,'');
-		var regStartTimeStatusPattern = 'Start:(.+)/Status:(.+)';
+		var regStartTimeStatusPattern = 'Start:(.+), Status:(.+)'; //changed regex for v16 support
 		var regStartTimeStatus = new RegExp(regStartTimeStatusPattern,'');
 		var Reports = [];
 		
